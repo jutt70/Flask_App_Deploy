@@ -10,14 +10,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+   
+    - name: Show Hash Value
+      run: echo ${{github.sha}}
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-  job2:
-
-    runs-on: ubuntu-latest
-    needs: job111
-
-    steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker images
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+  
