@@ -1,5 +1,5 @@
 
-name: Build and Push Image to Docker Hub
+name: Build and Push Image to Docker Hubss
 #Event Trigger
 on:
   push:
