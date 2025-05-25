@@ -3,9 +3,8 @@ name: Build and Push Image to Docker Hubssss
 #Event Trigger
 on:
   push:
-    branches: ["master"]
-  pull_request:
-   branches: ["master"]
+    branches: ["main"]
+
 #Jobs Define
 
 jobs:
