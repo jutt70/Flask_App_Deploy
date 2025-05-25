@@ -1,0 +1,16 @@
+name: Rahat Ullah JUTT
+
+on:
+  push:
+    branches: [ "main" ]             # Main Branch Main Jab code Push  ho ga then ye wala Workflow Trigger ho ga
+  
+jobs:
+
+  build_Image_Own_ImageRahat:
+
+    runs-on: ubuntu-latest       # Public Runner of Ubuntu
+
+    steps:
+    - uses: actions/checkout@v4 ##  Download the code otherwise Pipeline will not Run
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)   # Docker image Create
