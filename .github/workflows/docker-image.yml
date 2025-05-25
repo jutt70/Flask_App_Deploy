@@ -1,18 +1,1 @@
-name: Docker Image CI
 
-on: workflow_dispatch
-
-jobs:
-
-  job111:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v4
-   
-    - name: Show Hash Value
-      run: echo ${{github.sha}}
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-  
