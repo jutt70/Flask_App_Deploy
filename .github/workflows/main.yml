@@ -30,4 +30,4 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: rahatullahengineer/rahat_2025:1
+          tags: rahatullahengineer/rahat_2025:2
